@@ -1,19 +1,14 @@
-import React from 'react'
-import AddEntry from './AddEntry'
-import LeftSide from '../component/LeftSide'
-import RightSide from '../component/RightSide'
+import React, { useState } from 'react'
+import AddExpense from '../component/AddExpense'
+import ExpenseList from '../component/ExpenseList'
 
 const Dashboard = () => {
+    const [todos, setTodos] = useState([])
+
   return (
-    <div className='h-screen w-screen  flex'>
-        <div className='border  w-1/3'>
-
-        <LeftSide/>
-        </div>
-        <div className='border w-full'>
-
-        <RightSide/>
-        </div>
+    <div className='h-screen w-screen flex flex-col justify-center items-center'>
+      <AddExpense todos={todos} setTodos={setTodos} />
+      <ExpenseList todos={todos} setTodos={setTodos} />
     </div>
   )
 }
