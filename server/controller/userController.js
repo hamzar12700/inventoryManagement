@@ -1,4 +1,4 @@
-import UserModels from "../models/userModel";
+import UserModels from "../models/Orders.js";
 
 export function signUp(req,res) {
     try {

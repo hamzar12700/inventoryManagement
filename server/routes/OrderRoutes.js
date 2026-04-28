@@ -1,22 +1,22 @@
 import { Router } from "express";
 import { signUp } from "../controller/userController.js";
 
-const router = Router();
+const OrderRoutes = Router();
 
 // 👉 Signup Route
-router.post("/signup", signUp);
+OrderRoutes.post("/signup", signUp);
 
 // 👉 Dummy GET routes (example)
-router.get("/", (req, res) => {
+OrderRoutes.get("/", (req, res) => {
     res.send("All users");
 });
 
-router.get("/profile", (req, res) => {
+OrderRoutes.get("/profile", (req, res) => {
     res.send("User profile");
 });
 
-router.get("/test", (req, res) => {
+OrderRoutes.get("/test", (req, res) => {
     res.send("Test route working");
 });
 
-export default router;
+export default OrderRoutes;
